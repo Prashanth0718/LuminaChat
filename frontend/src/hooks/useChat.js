@@ -8,6 +8,7 @@ function useChat({
   setTypingUser,
   refreshConversation
 }) {
+  
 
   const socketRef = useRef(null);
 
@@ -15,10 +16,20 @@ function useChat({
 
     if (!user) return;
 
-    socketRef.current =
-      new WebSocket(
-        `ws://127.0.0.1:8000/ws/${user.email}`
-      );
+
+
+    
+
+
+    const WS_URL =
+  import.meta.env.VITE_API_URL
+    .replace("https://", "wss://")
+    .replace("http://", "ws://");
+
+socketRef.current =
+  new WebSocket(
+    `${WS_URL}/ws/${user.email}`
+  );
 
     socketRef.current.onopen = () => {
 
