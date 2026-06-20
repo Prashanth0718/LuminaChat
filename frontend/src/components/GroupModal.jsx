@@ -252,7 +252,7 @@ function GroupModal({
                           <div className="flex items-center gap-3">
                             {u.profile_picture ? (
                               <img
-                                src={`http://127.0.0.1:8000${u.profile_picture}`}
+                                src={`${import.meta.env.VITE_API_URL}${u.profile_picture}`}
                                 alt={u.username}
                                 className="w-10 h-10 rounded-full object-cover"
                               />

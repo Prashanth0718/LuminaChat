@@ -116,7 +116,7 @@ function Sidebar({
             >
               {user?.profile_picture ? (
                 <img
-                  src={`http://127.0.0.1:8000${user.profile_picture}`}
+                  src={`${import.meta.env.VITE_API_URL}${user.profile_picture}`}
                   alt={user?.username || 'User'}
                   className="w-full h-full rounded-full object-cover"
                 />
@@ -279,7 +279,7 @@ function Sidebar({
                       <div className="relative">
                         {u.profile_picture ? (
                           <img
-                            src={`http://127.0.0.1:8000${u.profile_picture}`}
+                            src={`${import.meta.env.VITE_API_URL}${u.profile_picture}`}
                             alt={u.username}
                             className="w-11 h-11 rounded-full object-cover ring-2 ring-white dark:ring-surface-800 shadow-sm"
                           />
@@ -394,7 +394,7 @@ function Sidebar({
                     {/* Group Avatar */}
                     {group.group_image ? (
                       <img
-                        src={`http://127.0.0.1:8000${group.group_image}`}
+                        src={`${import.meta.env.VITE_API_URL}${group.group_image}`}
                         alt={group.name}
                         className="w-11 h-11 rounded-full object-cover shadow-sm ring-2 ring-white dark:ring-surface-800"
                       />

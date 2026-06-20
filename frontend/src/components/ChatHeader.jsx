@@ -79,7 +79,7 @@ function ChatHeader({
         <div className="relative flex-shrink-0">
           {(isGroup ? selectedUser?.group_image : selectedUser?.profile_picture) ? (
             <img
-              src={`http://127.0.0.1:8000${isGroup ? selectedUser.group_image : selectedUser.profile_picture}`}
+              src={`${import.meta.env.VITE_API_URL}${isGroup ? selectedUser.group_image : selectedUser.profile_picture}`}
               alt={selectedUser.username}
               className="w-12 h-12 rounded-full object-cover ring-2 ring-primary-500/20"
             />

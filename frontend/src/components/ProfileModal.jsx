@@ -136,7 +136,7 @@ function ProfileModal({ showProfile, setShowProfile, profileData, onlineUsers })
                 >
                   {profileData.profile_picture ? (
                     <img
-                      src={`http://127.0.0.1:8000${profileData.profile_picture}`}
+                      src={`${import.meta.env.VITE_API_URL}${profileData.profile_picture}`}
                       alt={profileData.username}
                       className="w-28 h-28 rounded-full object-cover ring-4 ring-white shadow-xl"
                     />

@@ -353,7 +353,7 @@ function Profile() {
               >
                 {profile.profile_picture ? (
                   <img
-                    src={`http://127.0.0.1:8000${profile.profile_picture}`}
+                    src={`${import.meta.env.VITE_API_URL}${profile.profile_picture}`}
                     alt="Profile"
                     className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover ring-4 ring-primary-100 shadow-lg"
                   />

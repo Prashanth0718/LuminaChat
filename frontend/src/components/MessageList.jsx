@@ -382,10 +382,10 @@ function MessageList({
                         className="mb-2"
                       >
                         <img
-                          src={`http://127.0.0.1:8000${msg.image_url}`}
+                          src={`${import.meta.env.VITE_API_URL}${msg.image_url}`}
                           alt="Shared image"
                           className="rounded-xl max-w-[280px] max-h-[280px] object-cover cursor-pointer hover:opacity-95 transition-opacity"
-                          onClick={() => setPreviewImage(`http://127.0.0.1:8000${msg.image_url}`)}
+                          onClick={() => setPreviewImage(`${import.meta.env.VITE_API_URL}${msg.image_url}`)}
                         />
                       </motion.div>
                     )}
@@ -393,7 +393,7 @@ function MessageList({
                     {/* File */}
                     {!msg.deleted && msg.file_url && (
                       <a
-                        href={`http://127.0.0.1:8000${msg.file_url}`}
+                        href={`${import.meta.env.VITE_API_URL}${msg.file_url}`}
                         target="_blank"
                         rel="noreferrer"
                         className={`
@@ -428,7 +428,7 @@ function MessageList({
                           onPause={() => setPlayingAudio(null)}
                         >
                           <source
-                            src={`http://127.0.0.1:8000${msg.audio_url}`}
+                            src={`${import.meta.env.VITE_API_URL}${msg.audio_url}`}
                             type="audio/webm"
                           />
                         </audio>
